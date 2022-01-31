@@ -17,7 +17,6 @@ public class Translator {
     public String getTranslate(String text, LanguageType from, LanguageType to) {
 
         try {
-            System.setProperty("GOOGLE_API_KEY", "AIzaSyBvopR1NnpGOiZVl6UaeovNOMyRYpvLdMA");
             Translate translate = TranslateOptions.getDefaultInstance().getService();
 
             Translation translation = translate.translate(
