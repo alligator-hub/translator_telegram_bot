@@ -13,7 +13,6 @@ public class Translator {
     @Value("${translate.key}")
     private String translateApiKey;
 
-
     public String getTranslate(String text, LanguageType from, LanguageType to) {
 
         try {
