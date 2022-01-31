@@ -13,9 +13,11 @@ public class Translator {
     @Value("${translate.key}")
     private String translateApiKey;
 
+
     public String getTranslate(String text, LanguageType from, LanguageType to) {
 
         try {
+            System.setProperty("GOOGLE_API_KEY", translateApiKey);
             Translate translate = TranslateOptions.getDefaultInstance().getService();
 
             Translation translation = translate.translate(
